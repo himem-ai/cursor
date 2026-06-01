@@ -1,0 +1,17 @@
+{
+  "name": "himem-cursor",
+  "owner": {
+    "name": "HiMem",
+    "email": "support@agentir.com"
+  },
+  "metadata": {
+    "description": "HiMem memory for Cursor"
+  },
+  "plugins": [
+    {
+      "name": "himem",
+      "source": "cursor-extension",
+      "description": "Persistent memory — MCP, hooks, rules"
+    }
+  ]
+}
