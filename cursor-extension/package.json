@@ -1,0 +1,111 @@
+{
+  "name": "himem-cursor",
+  "displayName": "HiMem",
+  "description": "Persistent memory for Cursor — context, threads, and history across sessions",
+  "version": "0.1.0",
+  "publisher": "himem",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "himem.configure",
+        "title": "HiMem: Configure API Key & MCP"
+      },
+      {
+        "command": "himem.loadContext",
+        "title": "HiMem: Load Project Context"
+      },
+      {
+        "command": "himem.installHooks",
+        "title": "HiMem: Install Session Hooks"
+      },
+      {
+        "command": "himem.refreshThreads",
+        "title": "HiMem: Refresh Threads",
+        "icon": "$(refresh)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "himem",
+          "title": "HiMem",
+          "icon": "assets/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "himem": [
+        {
+          "type": "webview",
+          "id": "himem.threadsPanel",
+          "name": "Threads"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "HiMem",
+      "properties": {
+        "himem.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "HiMem API key from https://himem.ai",
+          "order": 1
+        },
+        "himem.apiUrl": {
+          "type": "string",
+          "default": "https://api.himem.ai",
+          "description": "HiMem API base URL",
+          "order": 2
+        },
+        "himem.project": {
+          "type": "string",
+          "default": "",
+          "description": "HiMem project name (defaults to workspace folder name)",
+          "order": 3
+        },
+        "himem.autoConfigureMcp": {
+          "type": "boolean",
+          "default": true,
+          "description": "Write .cursor/mcp.json when API key is set",
+          "order": 4
+        },
+        "himem.autoInstallHooks": {
+          "type": "boolean",
+          "default": true,
+          "description": "Install session hooks into workspace on activate",
+          "order": 5
+        },
+        "himem.contextDays": {
+          "type": "number",
+          "default": 7,
+          "description": "Days of history to load on session start",
+          "order": 6
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npm run compile && vsce package",
+    "lint": "tsc -p ./ --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/himem-ai/himem-cursor"
+  }
+}

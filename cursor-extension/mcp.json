@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "himem": {
+      "command": "npx",
+      "args": ["-y", "himem-mcp"],
+      "env": {
+        "HIMEM_KEY": "${env:HIMEM_KEY}",
+        "HIMEM_PROJECT": "${env:HIMEM_PROJECT}"
+      }
+    }
+  }
+}

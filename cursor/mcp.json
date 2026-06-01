@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "himem": {
+      "url": "https://mcp.himem.ai",
+      "headers": {
+        "X-Himem-Key": "YOUR_HIMEM_KEY_HERE"
+      }
+    }
+  }
+}

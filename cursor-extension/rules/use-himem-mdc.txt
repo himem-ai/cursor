@@ -1,0 +1,14 @@
+---
+description: Use HiMem for persistent memory across Cursor sessions
+alwaysApply: true
+---
+
+# HiMem
+
+At the start of each session, call `load_context` for the current project if HiMem MCP is available.
+
+When the user asks to remember something, use `remember`. For past decisions or discussions, use `search` or `recall`.
+
+Before ending a long session, use `save_session` with the conversation messages when appropriate.
+
+Track open work with `get_threads` and mark completed topics with `resolve_thread`.
