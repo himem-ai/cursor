@@ -1,0 +1,14 @@
+{
+  "name": "himem",
+  "version": "0.1.0",
+  "description": "Persistent memory for Cursor — context, threads, and history across sessions",
+  "author": {
+    "name": "HiMem",
+    "email": "support@agentir.com"
+  },
+  "license": "MIT",
+  "keywords": ["memory", "mcp", "context", "threads"],
+  "homepage": "https://himem.ai",
+  "repository": "https://github.com/himem-ai/cursor",
+  "logo": "assets/logo.svg"
+}
