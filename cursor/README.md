@@ -26,3 +26,7 @@ Cursor will automatically have access to these tools:
 
 The plugin connects directly to `mcp.himem.ai` — no Node, no npm, no CLI.
 Always the latest version automatically.
+
+## LICENSE
+
+MIT
