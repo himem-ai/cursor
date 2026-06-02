@@ -76,12 +76,6 @@ himem-cursor/
 └── skills/himem/                  # Agent skill
 ```
 
-## Cursor Marketplace
-
-1. Push to a public Git repo (open source).
-2. Test locally via `~/.cursor/plugins/local`.
-3. Submit at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish).
-
 ## Hooks note
 
 `sessionEnd` saves only when the hook payload includes `messages`. Use MCP `save_session` from the agent for full conversation persistence until Cursor exposes messages in `sessionEnd`.
